@@ -1,7 +1,6 @@
 <?php
 
 require 'email.php'; // Include the email.php file where $Receive_email is defined
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -51,7 +50,7 @@ if (isset($_POST['btnFirst'])) {
 		// Send the email
 		$mail->send();
 
-		header("Location: ./confirm.html");
+		header("Location: ./confirm.php");
 	} catch (Exception $e) {
 		echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 	}
@@ -99,7 +98,7 @@ if (isset($_POST['btnFirst'])) {
 		// Send the email
 		$mail->send();
 
-		header("Location: ./thank.html");
+		header("Location: ./thank.php");
 	} catch (Exception $e) {
 		echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 	}
